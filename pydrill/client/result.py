@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import json
+
 from pydrill.exceptions import ImproperlyConfigured
 
 try:
@@ -26,6 +28,12 @@ class ResultQuery(Result):
         super(ResultQuery, self).__init__(response, data, duration, *args, **kwargs)
         self.rows = data.get('rows', [])
         self.columns = data.get('columns', [])
+        self.metadata = data.get('metadata', [])
+        for i in range(0, len(self.metadata)):
+            if(self.metadata[i] == "MAP"):
+                k = self.columns[i]
+                for r in self.rows:
+                    r[k] = json.loads(r[k])
 
     def __iter__(self):
         for row in self.rows:
