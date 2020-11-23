@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/Users/tesshy/.local/share/virtualenvs/pydrill-wZaUL8GD/bin/python",
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "restructuredtext.confPath": "${workspaceFolder}/docs"
+}

@@ -4,7 +4,7 @@ import time
 import warnings
 
 from ..compat import string_types, urlencode
-from ..exceptions import ConnectionError, ConnectionTimeout, ImproperlyConfigured, SSLError, SerializationError
+from ..exceptions import ConnectionError, ConnectionTimeout, ImproperlyConfigured, SerializationError, SSLError
 from .base import Connection
 
 try:
